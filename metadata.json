@@ -1,5 +1,5 @@
 {
-  "name": "Rancho Cucamonga Plumbing Service",
-  "description": "Professional, reliable plumbing services in Rancho Cucamonga. Licensed, insured, and available for emergency repairs.",
+  "name": "The Plumbers",
+  "description": "Professional, reliable plumbing services by The Plumbers. Licensed, insured, and available for emergency repairs.",
   "requestFramePermissions": ["geolocation"]
 }

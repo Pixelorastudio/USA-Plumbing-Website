@@ -50,7 +50,7 @@ export default function Services() {
             We handle almost any plumbing issue imaginable. If you have a specific problem that isn't listed here, give us a call and we'll be happy to help.
           </p>
           <a 
-            href="https://wa.me/18402460275" 
+            href="https://wa.me/00000000000" 
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary inline-flex items-center gap-2"

@@ -42,7 +42,7 @@ export default function Header() {
             <Droplets className="text-white w-6 h-6" />
           </div>
           <span className={`text-xl font-bold tracking-tight ${isScrolled ? 'text-slate-900' : 'text-slate-900 md:text-white'}`}>
-            Rancho Cucamonga <span className="text-primary">Plumbing Service</span>
+            The <span className="text-primary">Plumbers</span>
           </span>
         </Link>
 
@@ -62,7 +62,7 @@ export default function Header() {
             </Link>
           ))}
           <a 
-            href="https://wa.me/18402460275" 
+            href="https://wa.me/00000000000" 
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-full font-semibold hover:bg-primary-dark transition-all hover:shadow-lg active:scale-95"
@@ -103,7 +103,7 @@ export default function Header() {
                 </Link>
               ))}
               <a 
-                href="https://wa.me/18402460275" 
+                href="https://wa.me/00000000000" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-primary text-white p-4 rounded-xl font-bold"

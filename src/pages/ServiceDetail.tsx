@@ -74,7 +74,7 @@ export default function ServiceDetail() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="https://wa.me/18402460275" 
+                href="https://wa.me/00000000000" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary flex items-center justify-center gap-2 text-lg"
@@ -105,13 +105,13 @@ export default function ServiceDetail() {
               <h4 className="text-xl font-bold mb-4">Need Immediate Assistance?</h4>
               <p className="text-slate-400 mb-6">Our emergency plumbing team is available 24/7 to handle any urgent issues.</p>
               <a 
-                href="https://wa.me/18402460275" 
+                href="https://wa.me/00000000000" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full btn-primary flex items-center justify-center gap-2"
               >
                 <Phone className="w-5 h-5" />
-                +18402460275
+                (###) ###-####
               </a>
             </div>
           </motion.div>

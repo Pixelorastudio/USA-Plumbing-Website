@@ -12,7 +12,7 @@ export default function Footer() {
               <Droplets className="text-white w-6 h-6" />
             </div>
             <span className="text-xl font-bold tracking-tight text-white">
-              Rancho Cucamonga <span className="text-primary">Plumbing Service</span>
+              The <span className="text-primary">Plumbers</span>
             </span>
           </Link>
           <p className="text-slate-400 leading-relaxed">
@@ -70,29 +70,29 @@ export default function Footer() {
           <ul className="space-y-4">
             <li className="flex items-start gap-3">
               <MapPin className="w-5 h-5 text-primary shrink-0" />
-              <span>12729 Jessie Ct, Rancho Cucamonga, CA 91739, United States</span>
+              <span>1234 Placeholder Lane, Placeholder City, ST 00000</span>
             </li>
             <li className="flex items-center gap-3">
               <Phone className="w-5 h-5 text-primary shrink-0" />
               <a 
-                href="https://wa.me/18402460275" 
+                href="https://wa.me/00000000000" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
               >
-                +18402460275
+                (###) ###-####
               </a>
             </li>
             <li className="flex items-center gap-3">
               <Mail className="w-5 h-5 text-primary shrink-0" />
-              <a href="mailto:info@ranchocucamongaplumbing.com" className="hover:text-primary transition-colors">info@ranchocucamongaplumbing.com</a>
+              <a href="mailto:info@example.com" className="hover:text-primary transition-colors">info@example.com</a>
             </li>
           </ul>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 pt-10 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
-        <p>© {new Date().getFullYear()} Rancho Cucamonga Plumbing Service. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} The Plumbers. All rights reserved.</p>
         <div className="flex gap-6">
           <a href="#" className="hover:text-primary">Privacy Policy</a>
           <a href="#" className="hover:text-primary">Terms of Service</a>

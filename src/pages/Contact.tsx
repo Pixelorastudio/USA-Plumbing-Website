@@ -45,8 +45,8 @@ export default function Contact() {
       const result = await response.json();
       if (result.success) {
         // Construct WhatsApp message URL
-        const whatsappNumber = '18402460275';
-        const whatsappMessage = `New Lead from Rancho Cucamonga Plumbing Service Website:
+        const whatsappNumber = '00000000000';
+        const whatsappMessage = `New Lead from The Plumbers Website:
 Name: ${data.name}
 Phone: ${data.phone}
 Email: ${data.email}
@@ -88,7 +88,7 @@ Message: ${data.message}`;
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-bold mb-6"
           >
-            Contact <span className="text-primary">Rancho Cucamonga Plumbing Service</span>
+            Contact <span className="text-primary">The Plumbers</span>
           </motion.h1>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto">
             Get in touch with our experts for a free estimate or emergency service.
@@ -110,12 +110,12 @@ Message: ${data.message}`;
               <div>
                 <h4 className="font-bold mb-1">Phone Number</h4>
                 <a 
-                  href="https://wa.me/18402460275" 
+                  href="https://wa.me/00000000000" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-slate-600 hover:text-primary transition-colors"
                 >
-                  +18402460275
+                  (###) ###-####
                 </a>
                 <p className="text-sm text-primary font-bold mt-1">24/7 Emergency Line</p>
               </div>
@@ -127,7 +127,7 @@ Message: ${data.message}`;
               </div>
               <div>
                 <h4 className="font-bold mb-1">Email Address</h4>
-                <a href="mailto:info@ranchocucamongaplumbing.com" className="text-slate-600 hover:text-primary transition-colors">info@ranchocucamongaplumbing.com</a>
+                <a href="mailto:info@example.com" className="text-slate-600 hover:text-primary transition-colors">info@example.com</a>
               </div>
             </div>
 
@@ -137,7 +137,7 @@ Message: ${data.message}`;
               </div>
               <div>
                 <h4 className="font-bold mb-1">Office Location</h4>
-                <p className="text-slate-600">12729 Jessie Ct, Rancho Cucamonga, CA 91739, United States</p>
+                <p className="text-slate-600">1234 Placeholder Lane, Placeholder City, ST 00000</p>
               </div>
             </div>
 
@@ -260,7 +260,7 @@ Message: ${data.message}`;
       {/* Map Embed: Visual location reference */}
       <section className="h-[400px] bg-slate-200 relative overflow-hidden">
         <iframe 
-          src="https://maps.google.com/maps?q=12729%20Jessie%20Ct,%20Rancho%20Cucamonga,%20CA%2091739&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+          src="https://maps.google.com/maps?q=1234%20Placeholder%20Lane,%20Placeholder%20City,%20ST%2000000&t=&z=13&ie=UTF8&iwloc=&output=embed" 
           width="100%" 
           height="100%" 
           style={{ border: 0 }} 
