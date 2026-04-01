@@ -57,7 +57,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="https://wa.me/14809447023" 
+                href="https://wa.me/18402460275" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary flex items-center justify-center gap-2 text-lg"
@@ -102,7 +102,7 @@ export default function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">Why Choose USA Plumbing?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">Why Choose Rancho Cucamonga Plumbing Service?</h2>
             <p className="text-slate-600 mb-10 leading-relaxed">
               With over 25 years of experience, we've built our reputation on quality, integrity, and exceptional customer service. We treat every home as if it were our own.
             </p>
@@ -207,17 +207,17 @@ export default function Home() {
           
           <h2 className="text-3xl md:text-5xl font-bold mb-8 relative z-10">Need Urgent Help? <br className="hidden md:block" /> Our Plumbers are Ready.</h2>
           <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto relative z-10">
-            Available 24/7 for all your plumbing emergencies. No job is too big or too small for USA Plumbing.
+            Available 24/7 for all your plumbing emergencies. No job is too big or too small for Rancho Cucamonga Plumbing Service.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center relative z-10">
             <a 
-              href="https://wa.me/14809447023" 
+              href="https://wa.me/18402460275" 
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary flex items-center justify-center gap-2 text-xl px-10 py-5"
             >
               <Phone className="w-6 h-6" />
-              Call Now: +14809447023
+              Call Now: +18402460275
             </a>
             <Link to="/contact" className="btn-outline border-white text-white hover:bg-white hover:text-slate-900 flex items-center justify-center gap-2 text-xl px-10 py-5">
               Contact Us

@@ -63,7 +63,7 @@ async function startServer() {
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`USA Plumbing Server running on http://localhost:${PORT}`);
+    console.log(`Rancho Cucamonga Plumbing Service running on http://localhost:${PORT}`);
   });
 }
 

@@ -48,7 +48,7 @@ export default function FAQ() {
               </p>
               <div className="space-y-4">
                 <a 
-                  href="https://wa.me/14809447023" 
+                  href="https://wa.me/18402460275" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 bg-white rounded-xl border border-slate-200 hover:border-primary transition-all group"

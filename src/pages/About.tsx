@@ -9,7 +9,7 @@ const values = [
 ];
 
 const timeline = [
-  { year: '1998', title: 'The Beginning', desc: 'USA Plumbing was founded with a single truck and a commitment to quality.' },
+  { year: '1998', title: 'The Beginning', desc: 'Rancho Cucamonga Plumbing Service was founded with a commitment to quality.' },
   { year: '2005', title: 'Expansion', desc: 'We expanded our services to cover the entire metropolitan area.' },
   { year: '2012', title: 'Innovation', desc: 'Introduced advanced leak detection and eco-friendly plumbing solutions.' },
   { year: '2023', title: 'Today', desc: 'A team of 50+ licensed professionals serving thousands of happy customers.' },
@@ -38,7 +38,7 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-bold mb-6"
           >
-            About <span className="text-primary">USA Plumbing</span>
+            About <span className="text-primary">Rancho Cucamonga Plumbing Service</span>
           </motion.h1>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto">
             Providing professional, reliable, and trustworthy plumbing solutions for over 25 years.
@@ -56,7 +56,7 @@ export default function About() {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-8">Our Mission & Story</h2>
             <p className="text-slate-600 mb-6 leading-relaxed">
-              Founded in 1998, USA Plumbing started as a small family-owned business with a simple goal: to provide high-quality plumbing services that people could actually trust. Over the decades, we've grown into one of the region's most respected plumbing companies, but our core values remain the same.
+              Founded in 1998, Rancho Cucamonga Plumbing Service started as a small family-owned business with a simple goal: to provide high-quality plumbing services that people could actually trust. Over the decades, we've grown into one of the region's most respected plumbing companies, but our core values remain the same.
             </p>
             <p className="text-slate-600 mb-8 leading-relaxed">
               We believe that every customer deserves a plumber who is not only technically skilled but also respectful, clean, and honest. That's why we only hire the best technicians and invest heavily in their ongoing training and certification.
