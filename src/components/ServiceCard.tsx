@@ -18,18 +18,20 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1 }}
-      className="group bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl transition-all hover:-translate-y-2"
+      className="card-unique group flex flex-col h-full"
     >
-      <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-        <Icon className="w-7 h-7" />
+      <div className="mono-label mb-2">Service ID/0{index + 1}</div>
+      <div className="w-16 h-16 bg-paper border border-ink/5 flex items-center justify-center mb-8 group-hover:bg-primary group-hover:border-primary transition-all duration-300">
+        <Icon className="w-8 h-8 group-hover:text-white transition-colors" />
       </div>
-      <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">{service.title}</h3>
-      <p className="text-slate-600 mb-6 line-clamp-2">{service.description}</p>
+      <h3 className="text-2xl font-bold mb-4 uppercase tracking-tighter">{service.title}</h3>
+      <p className="text-ink/60 mb-8 flex-grow leading-relaxed">{service.description}</p>
       <Link 
         to={`/services/${service.id}`} 
-        className="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all"
+        className="inline-flex items-center gap-3 text-xs font-mono uppercase tracking-widest text-ink hover:text-primary transition-all"
       >
-        Learn More <Icons.ArrowRight className="w-4 h-4" />
+        <span>Explore Details</span>
+        <Icons.ArrowRight className="w-4 h-4" />
       </Link>
     </motion.div>
   );

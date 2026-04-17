@@ -10,77 +10,67 @@ export default function FAQ() {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="bg-slate-900 py-24 text-white text-center relative overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-20">
-          <img 
-            src="https://picsum.photos/seed/faq/1920/1080" 
-            alt="FAQ Hero" 
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
-          />
-        </div>
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <motion.h1 
+      <section className="py-24 border-b border-ink/10 blueprint-grid relative">
+        <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-bold mb-6"
           >
-            Frequently Asked <span className="text-primary">Questions</span>
-          </motion.h1>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-            Everything you need to know about our services, pricing, and process.
-          </p>
+            <div className="mono-label mb-6 text-primary">Information Knowledge Base</div>
+            <h1 className="text-5xl md:text-7xl font-display font-bold uppercase tracking-tighter mb-6">
+              Critical <span className="text-primary italic">Intelligence</span>
+            </h1>
+            <p className="text-xl text-ink/60 max-w-2xl mx-auto font-light leading-relaxed">
+              Essential technical data and system protocols for property owners. Resolve common inquiries through our official knowledge base.
+            </p>
+          </motion.div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="section-padding">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
+      <section className="section-padding bg-paper">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-24">
           {/* Sidebar */}
           <div className="lg:col-span-1">
-            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 sticky top-32">
-              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
-                <HelpCircle className="w-8 h-8 text-primary" />
+            <div className="sticky top-32 space-y-10">
+              <div>
+                <div className="mono-label mb-6 text-primary">Support Units</div>
+                <h3 className="text-3xl font-bold uppercase tracking-tight mb-4">Direct <br />Consultation</h3>
+                <p className="text-ink/60 mb-8 leading-relaxed font-light">
+                  If your technical inquiry is not addressed in this database, initialize direct contact with our support units.
+                </p>
               </div>
-              <h3 className="text-2xl font-bold mb-4">Still Have Questions?</h3>
-              <p className="text-slate-600 mb-8 leading-relaxed">
-                If you can't find the answer you're looking for, please don't hesitate to contact our team.
-              </p>
+              
               <div className="space-y-4">
                 <a 
                   href="https://wa.me/00000000000" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-white rounded-xl border border-slate-200 hover:border-primary transition-all group"
+                  className="flex items-center gap-6 p-6 border border-ink/5 bg-white hover:border-primary transition-all group"
                 >
-                  <Phone className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
-                  <span className="font-bold">Call Us Directly</span>
+                  <div className="w-10 h-10 bg-primary/5 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  <span className="text-xs font-mono uppercase tracking-widest">Initial Hotline</span>
                 </a>
-                <a href="/contact" className="flex items-center gap-4 p-4 bg-white rounded-xl border border-slate-200 hover:border-primary transition-all group">
-                  <MessageSquare className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
-                  <span className="font-bold">Send a Message</span>
+                <a href="/contact" className="flex items-center gap-6 p-6 border border-ink/5 bg-white hover:border-primary transition-all group">
+                  <div className="w-10 h-10 bg-primary/5 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+                    <MessageSquare className="w-5 h-5" />
+                  </div>
+                  <span className="text-xs font-mono uppercase tracking-widest">Digital Inquiry</span>
                 </a>
               </div>
             </div>
           </div>
 
           {/* Accordion */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 border-t border-ink/10">
             {faqs.map((faq) => (
               <FAQAccordion
                 key={faq.id}
                 faq={faq}
                 isOpen={openId === faq.id}
                 onToggle={() => setOpenId(openId === faq.id ? null : faq.id)}
-              />
-            ))}
-            {/* Add more mock FAQs if needed */}
-            {faqs.map((faq) => (
-              <FAQAccordion
-                key={`${faq.id}-copy`}
-                faq={faq}
-                isOpen={openId === `${faq.id}-copy`}
-                onToggle={() => setOpenId(openId === `${faq.id}-copy` ? null : `${faq.id}-copy`)}
               />
             ))}
           </div>

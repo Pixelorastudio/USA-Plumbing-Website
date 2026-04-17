@@ -72,182 +72,151 @@ Message: ${data.message}`;
 
   return (
     <div className="pt-20">
-      {/* Hero Section: Trust-building header */}
-      <section className="bg-slate-900 py-24 text-white text-center relative overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-20">
-          <img 
-            src="https://images.unsplash.com/photo-1521207418485-99c705420785?auto=format&fit=crop&q=80&w=1920&h=1080" 
-            alt="Contact Hero" 
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
-          />
-        </div>
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <motion.h1 
+      {/* Hero Section */}
+      <section className="py-24 border-b border-ink/10 blueprint-grid relative">
+        <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-bold mb-6"
           >
-            Contact <span className="text-primary">The Plumbers</span>
-          </motion.h1>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-            Get in touch with our experts for a free estimate or emergency service.
-          </p>
+            <div className="mono-label mb-6">Service Portal / Inquiry</div>
+            <h1 className="text-5xl md:text-7xl font-display font-bold uppercase tracking-tighter mb-6">
+              Establish <span className="text-primary italic">Contact</span>
+            </h1>
+            <p className="text-xl text-ink/60 max-w-2xl mx-auto font-light leading-relaxed">
+              For technical support, emergency repairs, or professional consultations. Our team is available for immediate dispatch.
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      {/* Contact Section: Info + Form */}
-      <section className="section-padding">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
+      {/* Contact Section */}
+      <section className="section-padding bg-paper">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-20">
           {/* Contact Info Sidebar */}
-          <div className="lg:col-span-1 space-y-8">
-            <h2 className="text-3xl font-bold mb-8">Get In Touch</h2>
+          <div className="lg:col-span-1 space-y-4">
+            <div className="mono-label mb-8 text-primary">Technical Info</div>
             
-            <div className="flex gap-6 p-6 bg-slate-50 rounded-2xl border border-slate-100">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
-                <Phone className="w-6 h-6 text-primary" />
+            {[
+              { icon: Phone, title: 'Hotline', value: '(###) ###-####', sub: '24/7 Response Units', link: 'https://wa.me/00000000000' },
+              { icon: Mail, title: 'Electronic Mail', value: 'info@example.com', sub: 'General Inquiries', link: 'mailto:info@example.com' },
+              { icon: MapPin, title: 'Hub Location', value: '1234 Placeholder Lane', sub: 'Placeholder City, ST 00000', link: '#' },
+              { icon: Clock, title: 'Operation Hours', value: '08:00 - 18:00', sub: 'Mon-Fri / Sat Emer. Only', link: '#' },
+            ].map((item, i) => (
+              <div key={i} className="card-unique flex items-start gap-6">
+                <div className="w-10 h-10 border border-ink/5 bg-paper flex items-center justify-center shrink-0">
+                  <item.icon className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="text-[10px] font-mono uppercase tracking-widest text-ink/40 mb-1">{item.title}</h4>
+                  {item.link !== '#' ? (
+                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-lg font-bold uppercase tracking-tight hover:text-primary transition-colors">
+                      {item.value}
+                    </a>
+                  ) : (
+                    <p className="text-lg font-bold uppercase tracking-tight">{item.value}</p>
+                  )}
+                  <p className="text-[10px] font-mono uppercase tracking-widest mt-1 text-primary italic">{item.sub}</p>
+                </div>
               </div>
-              <div>
-                <h4 className="font-bold mb-1">Phone Number</h4>
-                <a 
-                  href="https://wa.me/00000000000" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-600 hover:text-primary transition-colors"
-                >
-                  (###) ###-####
-                </a>
-                <p className="text-sm text-primary font-bold mt-1">24/7 Emergency Line</p>
-              </div>
-            </div>
-
-            <div className="flex gap-6 p-6 bg-slate-50 rounded-2xl border border-slate-100">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
-                <Mail className="w-6 h-6 text-primary" />
-              </div>
-              <div>
-                <h4 className="font-bold mb-1">Email Address</h4>
-                <a href="mailto:info@example.com" className="text-slate-600 hover:text-primary transition-colors">info@example.com</a>
-              </div>
-            </div>
-
-            <div className="flex gap-6 p-6 bg-slate-50 rounded-2xl border border-slate-100">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
-                <MapPin className="w-6 h-6 text-primary" />
-              </div>
-              <div>
-                <h4 className="font-bold mb-1">Office Location</h4>
-                <p className="text-slate-600">1234 Placeholder Lane, Placeholder City, ST 00000</p>
-              </div>
-            </div>
-
-            <div className="flex gap-6 p-6 bg-slate-50 rounded-2xl border border-slate-100">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
-                <Clock className="w-6 h-6 text-primary" />
-              </div>
-              <div>
-                <h4 className="font-bold mb-1">Working Hours</h4>
-                <p className="text-slate-600">Mon - Fri: 8:00 AM - 6:00 PM</p>
-                <p className="text-slate-600">Sat - Sun: Emergency Only</p>
-              </div>
-            </div>
+            ))}
           </div>
 
-          {/* Contact Form: Main conversion element */}
+          {/* Contact Form */}
           <div className="lg:col-span-2">
-            <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-slate-100">
+            <div className="bg-white p-10 md:p-16 border border-ink/5 shadow-sm">
               {isSubmitted ? (
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
                   className="text-center py-20"
                 >
-                  <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-8">
-                    <CheckCircle2 className="w-10 h-10 text-green-600" />
+                  <div className="w-16 h-16 bg-ink text-paper flex items-center justify-center mx-auto mb-10">
+                    <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h3 className="text-3xl font-bold mb-4">Message Sent!</h3>
-                  <p className="text-slate-600 mb-8 max-w-md mx-auto">
-                    Thank you for reaching out. One of our experts will contact you shortly to discuss your plumbing needs.
+                  <h3 className="text-3xl font-display font-bold uppercase tracking-tight mb-4">Transmission Received</h3>
+                  <p className="text-ink/60 mb-12 max-w-sm mx-auto font-light leading-relaxed">
+                    Our technical coordinator has received your data packet and will initialize contact shortly.
                   </p>
                   <button 
                     onClick={() => setIsSubmitted(false)}
-                    className="btn-primary"
+                    className="btn-outline px-10"
                   >
-                    Send Another Message
+                    Resubmit Form
                   </button>
                 </motion.div>
               ) : (
                 <>
-                  <h3 className="text-2xl font-bold mb-8">Send Us a Message</h3>
+                  <div className="mono-label mb-10">Transmission Form</div>
                   {error && (
-                    <div className="mb-6 p-4 bg-red-50 border border-red-100 text-red-600 rounded-xl text-sm">
-                      {error}
+                    <div className="mb-8 p-6 bg-red-50 text-red-600 font-mono text-[11px] uppercase tracking-wider border-l-4 border-red-600">
+                      Error: {error}
                     </div>
                   )}
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <label className="text-sm font-bold text-slate-700">Full Name</label>
+                  <form onSubmit={handleSubmit} className="space-y-12">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                      <div className="space-y-4">
+                        <label className="text-[10px] font-mono uppercase tracking-[0.3em] text-ink/40">Full_Name</label>
                         <input 
                           name="name"
                           type="text" 
                           required
-                          placeholder="John Doe"
-                          className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-primary transition-colors"
+                          placeholder="REQUIRED_FIELD"
+                          className="w-full px-0 py-4 bg-transparent border-b border-ink/10 focus:outline-none focus:border-primary transition-colors placeholder:text-ink/10"
                         />
                       </div>
-                      <div className="space-y-2">
-                        <label className="text-sm font-bold text-slate-700">Phone Number</label>
+                      <div className="space-y-4">
+                        <label className="text-[10px] font-mono uppercase tracking-[0.3em] text-ink/40">Contact_Phone</label>
                         <input 
                           name="phone"
                           type="tel" 
                           required
-                          placeholder="(555) 000-0000"
-                          className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-primary transition-colors"
+                          placeholder="REQUIRED_FIELD"
+                          className="w-full px-0 py-4 bg-transparent border-b border-ink/10 focus:outline-none focus:border-primary transition-colors placeholder:text-ink/10"
                         />
                       </div>
                     </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-bold text-slate-700">Email Address</label>
+                    <div className="space-y-4">
+                      <label className="text-[10px] font-mono uppercase tracking-[0.3em] text-ink/40">Electronic_Address</label>
                       <input 
                         name="email"
                         type="email" 
                         required
-                        placeholder="john@example.com"
-                        className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-primary transition-colors"
+                        placeholder="REQUIRED_FIELD"
+                        className="w-full px-0 py-4 bg-transparent border-b border-ink/10 focus:outline-none focus:border-primary transition-colors placeholder:text-ink/10"
                       />
                     </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-bold text-slate-700">Service Needed</label>
-                      <select name="service" className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-primary transition-colors appearance-none">
-                        <option>Emergency Repair</option>
-                        <option>Leak Detection</option>
-                        <option>Drain Cleaning</option>
-                        <option>Water Heater Service</option>
-                        <option>Other</option>
+                    <div className="space-y-4">
+                      <label className="text-[10px] font-mono uppercase tracking-[0.3em] text-ink/40">Technical_Category</label>
+                      <select name="service" className="w-full px-0 py-4 bg-transparent border-b border-ink/10 focus:outline-none focus:border-primary transition-colors appearance-none cursor-pointer">
+                        <option>Emergency_Repair</option>
+                        <option>Leak_Detection</option>
+                        <option>Drain_Cleaning</option>
+                        <option>Water_Heater_Service</option>
+                        <option>Other_Inquiry</option>
                       </select>
                     </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-bold text-slate-700">Your Message</label>
+                    <div className="space-y-4">
+                      <label className="text-[10px] font-mono uppercase tracking-[0.3em] text-ink/40">Inquiry_Data</label>
                       <textarea 
                         name="message"
-                        rows={5}
+                        rows={4}
                         required
-                        placeholder="Tell us about your plumbing issue..."
-                        className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-primary transition-colors resize-none"
+                        placeholder="DESCRIBE_TECHNICAL_ISSUE"
+                        className="w-full px-0 py-4 bg-transparent border-b border-ink/10 focus:outline-none focus:border-primary transition-colors resize-none placeholder:text-ink/10"
                       ></textarea>
                     </div>
                     <button 
                       type="submit" 
                       disabled={isLoading}
-                      className="w-full btn-primary flex items-center justify-center gap-2 text-lg py-4 disabled:opacity-70 disabled:cursor-not-allowed"
+                      className="w-full btn-primary py-6 flex items-center justify-center gap-4 group"
                     >
                       {isLoading ? (
-                        <Loader2 className="w-5 h-5 animate-spin" />
+                        <Loader2 className="w-6 h-6 animate-spin" />
                       ) : (
-                        <Send className="w-5 h-5" />
+                        <Send className="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                       )}
-                      {isLoading ? 'Sending...' : 'Send Message'}
+                      <span className="text-sm font-mono uppercase tracking-[0.4em]">{isLoading ? 'Processing...' : 'Initialize Transfer'}</span>
                     </button>
                   </form>
                 </>

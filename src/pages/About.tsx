@@ -22,84 +22,85 @@ const timeline = [
 export default function About() {
   return (
     <div className="pt-20">
-      {/* Hero Section: Brand identity */}
-      <section className="bg-slate-900 py-24 text-white text-center relative overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-20">
-          <img 
-            src="https://images.unsplash.com/photo-1542013936693-884638332954?auto=format&fit=crop&q=80&w=1920&h=1080" 
-            alt="About Hero" 
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
-          />
-        </div>
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <motion.h1 
+      {/* Hero Section */}
+      <section className="py-24 border-b border-ink/10 blueprint-grid relative">
+        <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-bold mb-6"
           >
-            About <span className="text-primary">The Plumbers</span>
-          </motion.h1>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-            Providing professional, reliable, and trustworthy plumbing solutions for over 25 years.
-          </p>
+            <div className="mono-label mb-6 text-primary">Mission / Identity</div>
+            <h1 className="text-5xl md:text-7xl font-display font-bold uppercase tracking-tighter mb-6">
+              The <span className="text-primary italic">Plumbing</span> Standard
+            </h1>
+            <p className="text-xl text-ink/60 max-w-2xl mx-auto font-light leading-relaxed">
+              Providing technical mastery and professional integrity for high-performance residential systems since 1998.
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      {/* Mission & Story: Trust-building narrative */}
-      <section className="section-padding">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/* Mission & Story */}
+      <section className="section-padding bg-paper">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">Our Mission & Story</h2>
-            <p className="text-slate-600 mb-6 leading-relaxed">
-              Founded in 1998, The Plumbers started as a small family-owned business with a simple goal: to provide high-quality plumbing services that people could actually trust. Over the decades, we've grown into one of the region's most respected plumbing companies, but our core values remain the same.
+            <div className="mono-label mb-6">Origin Narrative</div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 uppercase tracking-tighter">Technical <br /><span className="text-primary italic">Excellence</span></h2>
+            <p className="text-xl text-ink/60 mb-6 leading-relaxed">
+              Founded in 1998, The Plumbers started as a small family-operated workshop committed to a singular goal: treating plumbing as a critical engineering discipline.
             </p>
-            <p className="text-slate-600 mb-8 leading-relaxed">
-              We believe that every customer deserves a plumber who is not only technically skilled but also respectful, clean, and honest. That's why we only hire the best technicians and invest heavily in their ongoing training and certification.
+            <p className="text-lg text-ink/60 mb-10 leading-relaxed font-light">
+              We believe every homeowner deserves a technician who is not only skilled in fluid dynamics but also disciplined in professional conduct. This philosophy drives our recruitment and rigorous training protocols.
             </p>
-            <div className="flex flex-wrap gap-6">
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="text-primary w-5 h-5" />
-                <span className="font-bold">Licensed & Bonded</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="text-primary w-5 h-5" />
-                <span className="font-bold">Insured Professionals</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="text-primary w-5 h-5" />
-                <span className="font-bold">24/7 Availability</span>
-              </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {[
+                'Licensed & Bonded Registry',
+                'Certified System Technicians',
+                '24/7 Response Readiness',
+                'Full Liability Protection'
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-3">
+                  <div className="w-1.5 h-1.5 bg-primary" />
+                  <span className="text-[11px] font-mono uppercase tracking-widest text-ink/70">{item}</span>
+                </div>
+              ))}
             </div>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
+            className="relative"
           >
-            <img 
-              src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&q=80&w=800&h=600" 
-              alt="Our Team" 
-              className="rounded-3xl shadow-2xl"
-              referrerPolicy="no-referrer"
-            />
+            <div className="aspect-[4/3] border border-ink/10 p-4">
+              <img 
+                src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&q=80&w=1200" 
+                alt="Our Team" 
+                className="w-full h-full object-cover grayscale"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+            <div className="absolute -bottom-8 -right-8 bg-ink text-paper p-8 hidden md:block">
+              <div className="mono-label text-paper/40 mb-2">Protocol Certified</div>
+              <div className="text-2xl font-display font-bold uppercase tracking-tight">System Reliability</div>
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* Core Values */}
-      <section className="section-padding bg-slate-50">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Core Values</h2>
-          <p className="text-slate-600 max-w-2xl mx-auto">
-            These are the principles that guide every repair, installation, and interaction we have.
-          </p>
+      <section className="section-padding blueprint-grid">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
+          <div className="max-w-xl">
+            <div className="mono-label mb-4 text-primary">Operating Principles</div>
+            <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-tighter">Foundational <br /> <span className="text-primary italic">Pillars</span></h2>
+          </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {values.map((value, i) => (
             <motion.div
               key={i}
@@ -107,46 +108,43 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 text-center"
+              className="card-unique group"
             >
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <value.icon className="w-8 h-8 text-primary" />
+              <div className="w-12 h-12 border border-ink/5 bg-paper flex items-center justify-center mb-6 group-hover:bg-ink group-hover:text-paper transition-all">
+                <value.icon className="w-6 h-6" />
               </div>
-              <h4 className="text-xl font-bold mb-3">{value.title}</h4>
-              <p className="text-slate-600 text-sm">{value.desc}</p>
+              <h4 className="text-xl font-bold mb-3 uppercase tracking-tight">{value.title}</h4>
+              <p className="text-ink/60 text-sm leading-relaxed font-light">{value.desc}</p>
             </motion.div>
           ))}
         </div>
       </section>
 
       {/* Timeline */}
-      <section className="section-padding">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Journey</h2>
-          <p className="text-slate-600 max-w-2xl mx-auto">
-            A look back at how we've grown and evolved over the years.
-          </p>
+      <section className="section-padding border-t border-ink/10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-24">
+          <div className="max-w-xl">
+            <div className="mono-label mb-4 text-primary">Service Chronology</div>
+            <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-tighter">Establishing <br /> <span className="text-primary italic">Integrity</span></h2>
+          </div>
         </div>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl">
           {timeline.map((item, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
+              initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="flex gap-8 mb-12 last:mb-0"
+              className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-20 last:mb-0 group"
             >
-              <div className="flex flex-col items-center">
-                <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0 z-10">
+              <div className="md:col-span-1">
+                <div className="text-5xl font-display font-bold text-ink/10 group-hover:text-primary transition-colors duration-500">
                   {item.year}
                 </div>
-                {i < timeline.length - 1 && (
-                  <div className="w-px h-full bg-slate-200 mt-4" />
-                )}
               </div>
-              <div className="pt-2">
-                <h4 className="text-xl font-bold mb-2">{item.title}</h4>
-                <p className="text-slate-600 leading-relaxed">{item.desc}</p>
+              <div className="md:col-span-3 pt-2">
+                <h4 className="text-xl font-bold mb-4 uppercase tracking-tight">{item.title}</h4>
+                <p className="text-ink/60 leading-relaxed text-lg font-light">{item.desc}</p>
               </div>
             </motion.div>
           ))}
